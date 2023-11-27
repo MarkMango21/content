@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Linear+B&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap');
+
+:root {
+	--primary: #D81E5B;
+	--secondary: #8A4EFC;
+	--light: #EEE;
+	--light-alt: #61759b;
+	--dark: #131A26;
+	--dark-alt: #202B3E;
+}
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	font-family: 'Noto Sans Linear B', sans-serif;
+}
+
+body {
+	font-family: 'Noto Sans Linear B', sans-serif;
+	background-color: white;
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: black;
+}
+
+
+.home-page{
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
+
+/*Expenge Page CSS */
+h1 {
+	font-size: 40px;
+	font-weight: 700;
+	margin-bottom: 32px;
+}
+
+.expensesDiv{
+	padding-left: 5vh;
+	padding-right: 5vh;
+}
+.expenseTotalGroup{
+	border-radius: 2px;
+	border:2px solid;
+	padding: 10px;
+	background-color: #202B3E;
+	color: white;
+}
+.expense {
+	position: relative;
+	background-color: var(--dark);
+	padding: 16px;
+	border-radius: 16px;
+	display: flex;
+	align-items: center;
+	color: white;
+	transition: 0.5s;
+	cursor: pointer;
+	margin-bottom: 16px;
+}
+.expense-layout{
+}
+.expense:hover {
+	opacity: .8;
+}
+.expense .text{
+  font-size: 20px;
+}
+.expense .price{
+	font-size: 20px;
+	margin-left: 50px;
+}
+
+.expense .delete-expense {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 16px;
+	color: var(--light);
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	background-color: #AF1E2D;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 700;
+}
+
+.expense-layout {
+	background-image: url('https://i.imgur.com/DjcukBk.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 90vh;
+}
+
+.main-content {
+	flex: 1;
+	/* Allow main content to take remaining space */
+	/* Add styles for your main content area */
+}
+
+.addExpenseInput {
+	font-size: 18px;
+	height: 45px;
+	padding-left: 20px;
+	width: 200px;
+	border-radius: 20px;
+	margin: 10px;
+	margin-right: 20px;
+}
+
+
+
+.createExpenseButton{
+	font-size: 18px;
+	width: 180px;
+	height: 40px;
+	border-radius: 20px;
+}
+
+.cancelExpenseButton{
+	font-size: 18px;
+	width: 180px;
+	height: 40px;
+	border-radius: 20px;
+	cursor: pointer;
+	background-color:#131A26;
+	color:white;
+	margin-left: 10px;
+	
+}
+.cancelExpenseButton:hover {
+	background-color: rgb(255, 17, 0);
+  }
+
+
+.createExpenseButton:hover {
+	background-color: black;
+	color: white;
+	cursor: pointer;
+}
+
+.testDiv{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-right: 5vh;
+	padding-left: 5vh;
+}
+.testDiv .title{
+	margin-top:60px;
+}
+
+.budgetButton{
+	width:100px;
+	height: 40px;
+	border-radius: 40px;
+}
+
+.budgetButton:hover{
+	color:white;
+	background-color: black;
+	cursor: pointer;
+}
+
+.monthly-budget-input{
+	margin-top: 10px;
+	margin-right: 10px;
+	padding: 15px;
+	width: 150px;
+	height: 40px;
+	border-radius: 40px;
+}
+.monthly-budget{
+	display: flex;
+}
+.mbudgetButton{
+	width:100px;
+	height: 22px;
+	border-radius: 40px;
+	margin-left: 2px;
+}
+
+.logout {
+	border-radius: 40px;
+	padding: 15px;
+	font-size: x-large;
+	margin-top: -100;
+}
+
+.logout:hover{
+	color:white;
+	background-color: black;
+	cursor: pointer;
+}
+
+.addExpenseDiv{
+	padding-left: 5vh;
+	padding-right: 5vh;
+	display: flex;
+	justify-content: space-between;
+}
+
+.logoutDiv{
+	justify-content: flex-end;
+}
+
+.expenseWelcome {
+	padding-top: 20px;
+	text-align: center;
+}
+
+.popup{
+	padding-top: 15px;
+	padding-left: 5vh;
+}
+
+
+  
+/* Sidebar CSS */
+.sidebar {
+	width: 250px; /* Set width of the sidebar */
+	height: 100vh;
+	background-color: #333;
+	color: #fff;
+	display: flex;
+  	flex-direction: column; /* Items will stack vertically */
+  	align-items: center;
+  }
+  
+
+  .logout:hover{
+	cursor: pointer;
+  }
+
+  .sideOption{
+	font-size: x-large;
+	width: 100%;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background-color: transparent;
+	border: none;
+	color: white;
+  }
+
+  .sideOption:hover{
+	background-color: grey;
+	opacity: 50%;
+	cursor: pointer;
+  }
+
+/* @media only screen and (min-width: 1200px){
+	.app{
+		width:800px
+	}
+} */
+
+
+/*Navbar CSS*/
+.navbar{
+  background-color: #202B3E;
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2rem;
+  padding: 20px 20px;
+}
+
+
+.logo {
+	max-width: 250px;
+}
+.site-title {
+  font-size: large;
+}
+
+.navbar ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar a {
+  color: inherit;
+  font-family: 'Noto Sans Linear B', sans-serif;
+  font-size: large;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: .25rem;
+}
+
+.navbar li.active {
+  background-color: #555;
+}
+
+.navbar li:hover {
+  background-color: #777;
+}
+.dev-entry
+{
+	position: relative;
+	background-color: var(--dark);
+	padding: 16px;
+	border-radius: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	transition: 0.5s;
+	cursor: pointer;
+	margin-bottom: 16px;
+}
+.addPopup {
+
+	/*
+	position: fixed;
+	bottom: 32px;
+	right: 32px;
+	*/
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 41px;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	width: 180px;
+	height: 64px;
+	border-radius: 999px;
+	font-size: 20px;
+	font-weight: 500;
+	color: var(--light);
+	background-color: var(--primary);
+	background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
+	cursor: pointer;
+}
+
+
+/*Image of guy in the home screen*/
+.image-flexBox { 
+	display: flex;
+	align-items: center;
+	margin-right: 50px;
+  }
+
+
+.homeButtons {
+	font-family: 'Noto Sans Linear B', sans-serif;
+	font-size: 30px;
+	margin: 30px;
+	border-radius: 30px;
+	padding: 10px;
+	background-color: darkgray;
+}
+
+.homeButtons:hover{
+	background-color: black;
+	color: white;
+}
+
+.welcomeDiv {
+	background-image: url('https://i.imgur.com/ofgmYoO.jpg');
+	background-size: cover;
+	background-position: center;
+	height: 90vh;
+	align-items: center;
+	justify-content: center;
+}
+
+.welcomeDiv h1 {
+	font-family: 'Kanit', sans-serif;
+	font-size: 50px;
+}
+
+.welcomeTextBox{
+	width: 500px;
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.5);
+	padding: 30px;
+	margin-left: 50px;
+	border-radius: 50px;
+}
+
+.welcomeTextBox img{
+	max-width: 80%;
+}
+.welcomeDiv h1 {
+	padding-top: 50px;
+}
+
+.featureStrip{
+	height: 100px;
+	background-color: darkgray;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	display: flex;
+}
+
+/* About Page */
+.about-devs{
+	background-image: url(https://i.imgur.com/DjcukBk.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.aboutHeader{
+	padding-top: 40px;
+	text-align: center;
+}
+.aboutBox{
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+}
+.memberCard {
+	align-items: center;
+	margin: 20px;
+}
+
+.cardContent{
+	text-align: center;
+	font-size: 20px;
+}
+
+.memberCard img {
+	align-items: center;
+	max-width: 40%;
+	text-align: center;
+}
+
+.closePopup{
+	padding-left:10px;
+	cursor: pointer;
+	color: black;
+}
+
