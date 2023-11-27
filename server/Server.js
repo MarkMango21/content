@@ -22,7 +22,9 @@ const PORT_S = 433;     //httpS port.
 // Neccessary packages for accepting json data
 app.use(cors());
 app.use(express.json());    //for parsing json
+-app.use(express.urlencoded({extended : false }));
 app.set('view engine', 'pug');  //view engine for verify page.
+
 
 // Global middleware function (logs the time, along with request method and route)
 app.use( (req, res, next) => { 
@@ -30,6 +32,11 @@ app.use( (req, res, next) => {
     console.log('Request Type:', req.method, ', Route:', req.path);
     next()
 })
+app.use(
+    cors({
+        origin:["http://localhost:3000","https://ExpenseExpert.onrender.com"],
+    })
+);
 
 //infrastructure for HTTPS, requires a key pair be created and then a cert.
 const https = require('node:https');
